@@ -1,11 +1,11 @@
-package baekjoon.brute_force;
+package baekjoon.brute_force.boj2615;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
 public class Boj2615 {
     public static void main(String[] args) throws IOException {
-//        System.setIn(new FileInputStream("./src/baekjoon/brute_force/input_2615.txt"));
+//        System.setIn(new FileInputStream("./src/baekjoon/brute_force/boj2615/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = 19;
         int[][] grid = new int[n][n];
