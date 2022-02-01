@@ -23,11 +23,9 @@ public class Boj2805 {
 
         int right = arr[n-1];
         int left = 0;
-        int answer = 0;
         while(right >= left){
             long sum = 0;
             int mid = (right + left) / 2;
-            answer = mid;
             for(int i = arr.length - 1 ; i >= 0; i--){
                 if(arr[i] - mid >= 0){
                     sum += arr[i] - mid;
