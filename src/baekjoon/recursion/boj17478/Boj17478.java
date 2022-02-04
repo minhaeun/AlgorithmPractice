@@ -1,4 +1,4 @@
-package baekjoon.recursive.boj17478;
+package baekjoon.recursion.boj17478;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -22,7 +22,7 @@ public class Boj17478 {
     }
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/recursive/boj17478/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/recursion/boj17478/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb= new StringBuilder();
         int N = Integer.parseInt(br.readLine());
