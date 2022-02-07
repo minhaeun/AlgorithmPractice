@@ -25,7 +25,7 @@ public class Boj16974 {
         hamburger[0] = 1;
         patty[0] = 1;
 
-        for(int i = 1; i <= N; i++){
+        for(int i = 1; i <= N; ++i){
             hamburger[i] = 1 + hamburger[i - 1] + 1 + hamburger[i - 1] + 1;
             patty[i] = patty[i - 1] + 1 + patty[i - 1];
         }
@@ -36,12 +36,12 @@ public class Boj16974 {
     static long recursion(int n, long x){
         if(n == 0){
             if(x == 0)  return 0;
-            if(x == 1)  return 1;
+            else if(x == 1)  return 1;
         }
 
         if(x == 1)  return 0;
         else if(x <= 1 + hamburger[n-1])    return recursion(n-1, x-1);
-        else if(x == 1 + hamburger[n-1])    return patty[n-1] + 1;
+        else if(x == 1 + hamburger[n-1] + 1)    return patty[n-1] + 1;
         else if(x <= 1 + hamburger[n-1] + 1 + hamburger[n-1])   return patty[n-1] + 1 + recursion(n-1, x - (1 + hamburger[n-1] + 1));
         else    return patty[n-1] + 1 + patty[n-1];
     }
