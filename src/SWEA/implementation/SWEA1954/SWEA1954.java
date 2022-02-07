@@ -1,14 +1,13 @@
-package SWEA.SWEA1954;
+package SWEA.implementation.SWEA1954;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class SWEA1954 {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA1954/input.txt"));
+        System.setIn(new FileInputStream("SWEA/implementation/SWEA1954/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb;
         int[] dr = { 0, -1, 0, 1 }; // 우, 하, 좌, 상

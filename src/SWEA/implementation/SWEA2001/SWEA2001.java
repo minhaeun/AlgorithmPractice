@@ -1,4 +1,4 @@
-package SWEA.SWEA2001;
+package SWEA.implementation.SWEA2001;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class SWEA2001 {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA2001/input.txt"));
+        System.setIn(new FileInputStream("SWEA/implementation/SWEA2001/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int T = Integer.parseInt(br.readLine());

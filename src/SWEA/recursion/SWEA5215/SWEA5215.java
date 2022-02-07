@@ -1,4 +1,4 @@
-package SWEA.SWEA5215;
+package SWEA.recursion.SWEA5215;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -13,7 +13,7 @@ public class SWEA5215 {
     static int max;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA5215/input.txt"));
+        System.setIn(new FileInputStream("SWEA/recursion/SWEA5215/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = null;
         StringBuilder sb = null;
