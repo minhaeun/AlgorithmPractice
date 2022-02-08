@@ -1,4 +1,4 @@
-package SWEA.implementation.SWEA1289;
+package SWEA.simulation.SWEA1289;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class SWEA1289 {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("SWEA/implementation/SWEA1289/input.txt"));
+        System.setIn(new FileInputStream("SWEA/simulation/SWEA1289/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb;
 

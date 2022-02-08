@@ -1,10 +1,9 @@
-package baekjoon.boj17213;
+package baekjoon.recursion.boj17213;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Boj17213 {
     static int N;
@@ -13,7 +12,7 @@ public class Boj17213 {
     //static int[] fruits;
     static int totalCount;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj17213/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/recursion/boj17213/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         N = Integer.parseInt(br.readLine());
