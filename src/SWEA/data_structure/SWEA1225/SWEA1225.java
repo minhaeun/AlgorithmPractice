@@ -1,4 +1,4 @@
-package SWEA.SWEA1225;
+package SWEA.data_structure.SWEA1225;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ public class SWEA1225 {
     static int x;
     static Queue<Integer> queue;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA1225/input.txt"));
+        System.setIn(new FileInputStream("SWEA/data_structure/SWEA1225/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = null;
         int T = 10;

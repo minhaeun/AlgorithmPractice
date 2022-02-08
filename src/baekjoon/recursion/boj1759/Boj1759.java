@@ -1,4 +1,4 @@
-package baekjoon.boj1759;
+package baekjoon.recursion.boj1759;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -16,7 +16,7 @@ public class Boj1759 {
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj1759/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/recursion/boj1759/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
