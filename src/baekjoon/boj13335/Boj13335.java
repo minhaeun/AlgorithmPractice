@@ -39,22 +39,22 @@ public class Boj13335 {
             queue.offer(new Truck(Integer.parseInt(st.nextToken()), 0));
         }
 
-        int time = 0, weight = 0;
+        int count = 0, weight = 0;
 
         while(!queue.isEmpty() || !bridge.isEmpty()){
-            time++;
+            count++;
 
-            if(!bridge.isEmpty() && time - bridge.peek().time >= W)
+            if(!bridge.isEmpty() && count - bridge.peek().time >= W)
                 weight -= bridge.poll().weight;
 
             if(!queue.isEmpty() && weight + queue.peek().weight <= L){
                 Truck truck = queue.poll();
                 weight += truck.weight;
 
-                bridge.add(new Truck(truck.weight, time));
+                bridge.add(new Truck(truck.weight, count));
             }
         }
-        System.out.println(time);
+        System.out.println(count);
 
     }
 }
