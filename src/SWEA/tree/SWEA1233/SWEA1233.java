@@ -1,4 +1,4 @@
-package SWEA.SWEA1233;
+package SWEA.tree.SWEA1233;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class SWEA1233 {
     static int N;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA1233/input.txt"));
+        System.setIn(new FileInputStream("SWEA/tree/SWEA1233/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = null;
 

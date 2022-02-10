@@ -1,11 +1,10 @@
-package baekjoon.boj3258;
+package baekjoon.brute_force.boj3258;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Boj3258 {
@@ -13,7 +12,7 @@ public class Boj3258 {
     static int[] obs;
     static ArrayList<Integer> arrayList;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj3258/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/brute_force/boj3258/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 

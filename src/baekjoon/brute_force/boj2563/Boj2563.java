@@ -1,4 +1,4 @@
-package baekjoon.boj2563;
+package baekjoon.brute_force.boj2563;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Boj2563 {
     static int N;
     static boolean[][] paper;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2563/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/brute_force/boj2563/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = null;
 
