@@ -1,4 +1,4 @@
-package SWEA.SWEA2805;
+package SWEA.simulation.SWEA2805;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ public class SWEA2805 {
     static int sum;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA2805/input.txt"));
+        System.setIn(new FileInputStream("SWEA/simulation/SWEA2805/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int T = Integer.parseInt(br.readLine());

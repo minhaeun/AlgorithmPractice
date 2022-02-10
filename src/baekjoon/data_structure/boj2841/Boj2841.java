@@ -1,4 +1,4 @@
-package baekjoon.boj2841;
+package baekjoon.data_structure.boj2841;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ public class Boj2841 {
     static int N, P, count = 0;
     static Stack<Integer>[] stack;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2841/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/data_structure/boj2841/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         N = Integer.parseInt(st.nextToken());

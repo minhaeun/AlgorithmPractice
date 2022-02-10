@@ -1,4 +1,4 @@
-package SWEA.SWEA3499;
+package SWEA.data_structure.SWEA3499;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ public class SWEA3499 {
     static ArrayList<String> arrayList1, arrayList2;
     public static void main(String[] args) throws IOException {
 
-        System.setIn(new FileInputStream("./src/SWEA/SWEA3499/input.txt"));
+        System.setIn(new FileInputStream("SWEA/data_structure/SWEA3499/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = null;
         StringBuilder sb;
