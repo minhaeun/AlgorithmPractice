@@ -25,8 +25,10 @@ public class SWEA1233 {
                 st.nextToken();
                 String ch = st.nextToken();
 
-                if (i <= N / 2 && Character.isDigit(ch.charAt(0))) result = 0;
-                if (i > N / 2 && !Character.isDigit(ch.charAt(0))) result = 0;
+                if (i <= N / 2 && Character.isDigit(ch.charAt(0)))  result = 0;
+
+                if (i > N / 2 && !Character.isDigit(ch.charAt(0)))   result = 0;
+
             }
             sb.append("#").append(tc).append(" ").append(result);
             System.out.println(sb);
