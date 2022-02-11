@@ -1,4 +1,4 @@
-package baekjoon.boj2309;
+package baekjoon.brute_force.boj2309;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Boj2309 {
     static int N;
     static int[] height;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2309/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/brute_force/boj2309/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = 9;
         height = new int[N];
