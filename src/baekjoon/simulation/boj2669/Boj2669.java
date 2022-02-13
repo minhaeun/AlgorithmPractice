@@ -1,4 +1,4 @@
-package baekjoon.boj2669;
+package baekjoon.simulation.boj2669;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Boj2669 {
     static boolean[][] grid;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2669/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/simulation/boj2669/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         grid = new boolean[101][101];

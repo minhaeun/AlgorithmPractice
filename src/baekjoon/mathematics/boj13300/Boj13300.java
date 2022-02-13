@@ -1,4 +1,4 @@
-package baekjoon.boj13300;
+package baekjoon.mathematics.boj13300;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ public class Boj13300 {
     static int K;   // 최대 인원 수
     static int[][] info;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj13300/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/mathematics/boj13300/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 

@@ -1,10 +1,9 @@
-package baekjoon.boj2477;
+package baekjoon.simulation.boj2477;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Boj2477 {
@@ -12,7 +11,7 @@ public class Boj2477 {
     static int[] arr;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2477/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/simulation/boj2477/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 

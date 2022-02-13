@@ -1,4 +1,4 @@
-package baekjoon.boj10157;
+package baekjoon.simulation.boj10157;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ public class Boj10157 {
     static int dc[] = {1, 0, -1, 0};
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj10157/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/simulation/boj10157/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         StringBuilder sb = new StringBuilder();
