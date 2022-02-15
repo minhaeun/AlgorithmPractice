@@ -1,4 +1,4 @@
-package baekjoon.boj1260;
+package baekjoon.graph.boj1260;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ public class Boj1260 {
     static PriorityQueue<Integer>[] pq2;
     static boolean[] visit;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj1260/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/graph/boj1260/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
