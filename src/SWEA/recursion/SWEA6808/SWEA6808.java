@@ -1,4 +1,4 @@
-package SWEA.SWEA6808;
+package SWEA.recursion.SWEA6808;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ public class SWEA6808 {
     static int sum, sum2, answer, answer2;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA6808/input.txt"));
+        System.setIn(new FileInputStream("SWEA/recursion/SWEA6808/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         StringBuilder sb;

@@ -1,4 +1,4 @@
-package baekjoon.boj2954;
+package baekjoon.brute_force.boj2954;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class Boj2954 {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2954/Input.txt"));
+        System.setIn(new FileInputStream("baekjoon/brute_force/boj2954/Input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb =  new StringBuilder();
         char[] chars = br.readLine().toCharArray();

@@ -1,4 +1,4 @@
-package baekjoon.boj20361;
+package baekjoon.brute_force.boj20361;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class Boj20361 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
-        System.setIn(new FileInputStream("./src/baekjoon/boj20361/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/brute_force/boj20361/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         StringBuilder sb;
