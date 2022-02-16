@@ -16,7 +16,7 @@ public class Boj16926 {
     static int num;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("baekjoon/simulation/boj16926/input.txt"));
+        System.setIn(new FileInputStream("./src/baekjoon/simulation/boj16926/input2.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         StringBuilder sb = new StringBuilder();
@@ -31,11 +31,13 @@ public class Boj16926 {
                 map[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-
+        long s = System.nanoTime();
         num = Math.min(N, M) / 2;       // 회전이 필요한 사각형의 수
         for (int i = 0; i < R; i++) {     // 회전 수 만큼 회전하기
             rotation();
         }
+        System.out.println(System.nanoTime() - s);
+
 
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
