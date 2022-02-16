@@ -1,4 +1,4 @@
-package SWEA.SWEA4012;
+package SWEA.recursion.SWEA4012;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -13,7 +13,7 @@ public class SWEA4012 {
     static int[][] S;
     static boolean[] visit;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA4012/input.txt"));
+        System.setIn(new FileInputStream("SWEA/recursion/SWEA4012/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         StringBuilder sb;

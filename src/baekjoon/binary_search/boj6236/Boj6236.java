@@ -1,4 +1,4 @@
-package baekjoon.boj6236;
+package baekjoon.binary_search.boj6236;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Boj6236 {
     static int N, M;
     static int[] costs;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj6236/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/binary_search/boj6236/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
