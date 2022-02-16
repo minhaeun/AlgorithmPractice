@@ -75,8 +75,8 @@ public class SWEA5644 {
                 int max = Integer.MIN_VALUE;
                 for(int b1 = 0; b1 < A; b1++){
                     for(int b2 = 0; b2 < A; b2++){
-                        int amountA = check(rA,cA, b1);
-                        int amountB = check(rB,cB, b2);
+                        int amountA = chkAmount(rA,cA, b1);
+                        int amountB = chkAmount(rB,cB, b2);
                         total = amountA + amountB;
                         // 0이면 배터리 안쓰고 있는 중 이니까 total 값 그대로, 같은 배터리를 쓰고있으면 /2 해주기
                         if((b1 == b2) && amountA != 0 && amountB != 0){
@@ -104,7 +104,7 @@ public class SWEA5644 {
     }
 
 
-    public static int check(int r, int c, int bc){
+    public static int chkAmount(int r, int c, int bc){
 
         // 현재위치에서 bc번 배터리까지의 거리
         int bcd = Math.abs(batteries[bc].r - r) + Math.abs(batteries[bc].c - c);
