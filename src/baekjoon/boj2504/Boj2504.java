@@ -49,7 +49,7 @@ public class Boj2504 {
 
             }
 
-
+            System.out.println(ans);
         }
         if(!stack.isEmpty()) System.out.println(0);
         else    System.out.println(ans);
