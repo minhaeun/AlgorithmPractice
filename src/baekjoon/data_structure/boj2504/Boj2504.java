@@ -1,4 +1,4 @@
-package baekjoon.boj2504;
+package baekjoon.data_structure.boj2504;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ public class Boj2504 {
     static Stack<Character> stack;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2504/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/data_structure/boj2504/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         chars = br.readLine().toCharArray();

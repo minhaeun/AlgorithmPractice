@@ -1,4 +1,4 @@
-package baekjoon.boj1715;
+package baekjoon.data_structure.boj1715;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Boj1715 {
         static int N;
         static PriorityQueue<Integer> pq;
         public static void main(String[] args) throws IOException {
-            System.setIn(new FileInputStream("./src/baekjoon/boj1715/input.txt"));
+            System.setIn(new FileInputStream("baekjoon/data_structure/boj1715/input.txt"));
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             N = Integer.parseInt(br.readLine());
 
