@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 
 public class Boj1697 {
     static int N, K;
-    static int[] arr, min;
+    static int[] arr;
 
     public static void main(String[] args) throws IOException {
         System.setIn(new FileInputStream("./src/baekjoon/boj1697/input.txt"));
@@ -20,30 +20,42 @@ public class Boj1697 {
 
         N = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
-        arr = new int[3];
-        min = new int[100005];
-        Arrays.fill(min, -1);
+
+        // 수빈이가 더 큰 좌표에 있으면 걸어가야함
+        if(N >= K){
+            System.out.println(N-K);
+            return;
+        }
+
         Queue<Integer> queue = new LinkedList<>();
-        queue.add(N);
-        min[N] = 0;
+        arr = new int[100001];
 
+        // 지금 수빈이 위치
+        queue.offer(N);
+        arr[N] = 1;
+
+        // BFS 탐색
         while(!queue.isEmpty()){
-            int next = queue.poll();
-
-            arr[0] = next - 1;
-            arr[1] = next + 1;
-            arr[2] = next * 2;
-
+            int now = queue.poll();
             for(int i = 0; i < 3; i++){
-                if(arr[i] < 0 || arr[i] > 100000)   continue;
-                if(min[arr[i]] == -1){
-                    queue.add(arr[i]);
-                    min[arr[i]] = min[next] + 1;
+                int next;
+                if(i == 0)  next = now - 1;
+                else if(i == 1) next = now + 1;
+                else    next = now * 2;
+
+                if(next == K){
+                    System.out.println(arr[now]);
+                    return;
+                }
+                if(next < 0 || next > 100000)   continue;
+                if(arr[next] == 0){
+                    queue.offer(next);
+                    arr[next] = arr[now] + 1;
                 }
             }
         }
 
-        System.out.println(min[K]);
+
 
     }
 }
