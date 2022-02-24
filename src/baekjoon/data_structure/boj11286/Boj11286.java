@@ -1,4 +1,4 @@
-package baekjoon.boj11286;
+package baekjoon.data_structure.boj11286;
 
 import java.io.*;
 import java.util.Comparator;
@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 public class Boj11286 {
     static int N;
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("./src/baekjoon/boj11286/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/data_structure/boj11286/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         N = Integer.parseInt(br.readLine());
