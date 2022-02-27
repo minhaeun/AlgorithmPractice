@@ -1,4 +1,4 @@
-package baekjoon.boj1244;
+package baekjoon.simulation.boj1244;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ public class Boj1244 {
     static int N, M;
     static boolean[] switches;
     public static void main(String[] args) throws Exception{
-        System.setIn(new FileInputStream("./src/baekjoon/boj1244/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/simulation/boj1244/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         StringTokenizer st;
