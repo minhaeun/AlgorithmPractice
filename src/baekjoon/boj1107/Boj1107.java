@@ -10,13 +10,14 @@ public class Boj1107 {
     public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("./src/baekjoon/boj1107/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
+        StringTokenizer st = null;
 
         int N = Integer.parseInt(br.readLine());
-        int cur = 100;
         int M = Integer.parseInt(br.readLine());
         boolean[] broke = new boolean[10];
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        if(M != 0)
+            st = new StringTokenizer(br.readLine(), " ");
 
         // 0 ~ 9 까지 버튼 중 고장난 버튼은 true로 바꾸기
         for(int i = 0; i < M; i++){
@@ -28,15 +29,25 @@ public class Boj1107 {
             return;
         }
 
+        int ans = Math.abs(N - 100);
+        for(int i = 0; i <= 1000000; i++){
+            String str = String.valueOf(i);
 
+            boolean isPossible = true;
+            for(int j = 0; j < str.length(); j++){
+                int btn = str.charAt(j) - '0';
+                if(broke[btn]){
+                    isPossible = false;
+                    break;
+                }
+            }
 
-
-
-
-
-
-
-
+            if(isPossible){
+                int cnt = str.length() + Math.abs(i - N);
+                ans = Math.min(ans, cnt);
+            }
+        }
+        System.out.println(ans);
 
     }
 }
