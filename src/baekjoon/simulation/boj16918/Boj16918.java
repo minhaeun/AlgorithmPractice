@@ -1,4 +1,4 @@
-package baekjoon.boj16918;
+package baekjoon.simulation.boj16918;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -13,7 +13,7 @@ public class Boj16918 {
     static int[][] timeMap;
 
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("./src/baekjoon/boj16918/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/simulation/boj16918/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
