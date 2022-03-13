@@ -1,4 +1,4 @@
-package baekjoon.boj2667;
+package baekjoon.graph.boj2667;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ public class Boj2667 {
     static int[] dc = {0, 0, -1, 1};
     static ArrayList<Integer> arrayList = new ArrayList<>();
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2667/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/graph/boj2667/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();

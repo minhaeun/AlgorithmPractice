@@ -1,4 +1,4 @@
-package baekjoon.boj2491;
+package baekjoon.dp.boj2491;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class Boj2491 {
     public static void main(String[] args) throws Exception{
-        System.setIn(new FileInputStream("./src/baekjoon/boj2491/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/dp/boj2491/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());

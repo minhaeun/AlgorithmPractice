@@ -1,4 +1,4 @@
-package baekjoon.boj2564;
+package baekjoon.simulation.boj2564;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class Boj2564 {
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2564/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/simulation/boj2564/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int N = Integer.parseInt(st.nextToken());// 세로길이

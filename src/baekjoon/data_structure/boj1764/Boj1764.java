@@ -1,4 +1,4 @@
-package baekjoon.boj1764;
+package baekjoon.data_structure.boj1764;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

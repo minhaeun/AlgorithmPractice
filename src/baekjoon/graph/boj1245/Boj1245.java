@@ -1,4 +1,4 @@
-package baekjoon.boj1245;
+package baekjoon.graph.boj1245;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ public class Boj1245 {
     static boolean check = true;
     static boolean[][] visit;
     public static void main(String[] args) throws Exception{
-        System.setIn(new FileInputStream("./src/baekjoon/boj1245/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/graph/boj1245/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 

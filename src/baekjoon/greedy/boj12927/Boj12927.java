@@ -1,10 +1,10 @@
-package baekjoon.boj12927;
+package baekjoon.greedy.boj12927;
 
 import java.io.*;
 
 public class Boj12927 {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj12927/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/greedy/boj12927/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String str = br.readLine();

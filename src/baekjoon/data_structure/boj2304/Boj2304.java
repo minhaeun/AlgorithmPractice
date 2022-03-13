@@ -1,4 +1,4 @@
-package baekjoon.boj2304;
+package baekjoon.data_structure.boj2304;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Boj2304 {
     static int index;
 
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2304/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/data_structure/boj2304/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         int max = 0;

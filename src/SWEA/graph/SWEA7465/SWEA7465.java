@@ -1,4 +1,4 @@
-package SWEA.SWEA7465;
+package SWEA.graph.SWEA7465;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -32,7 +32,7 @@ public class SWEA7465 {
         parents[bRoot] = aRoot;
     }
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA7465/input.txt"));
+        System.setIn(new FileInputStream("SWEA/graph/SWEA7465/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         StringBuilder sb = new StringBuilder();

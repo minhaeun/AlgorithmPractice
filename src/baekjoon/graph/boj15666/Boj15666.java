@@ -1,4 +1,4 @@
-package baekjoon.boj15666;
+package baekjoon.graph.boj15666;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ public class Boj15666 {
     static int N, M, numbers[], input[];
     static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj15666/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/graph/boj15666/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 

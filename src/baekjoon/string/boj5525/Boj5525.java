@@ -1,4 +1,4 @@
-package baekjoon.boj5525;
+package baekjoon.string.boj5525;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Boj5525 {
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("./src/baekjoon/boj5525/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/string/boj5525/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());

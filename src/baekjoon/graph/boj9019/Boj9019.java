@@ -1,4 +1,4 @@
-package baekjoon.boj9019;
+package baekjoon.graph.boj9019;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -23,7 +23,7 @@ public class Boj9019 {
     static boolean[] visited;
 
     public static void main(String[] args) throws Exception{
-        System.setIn(new FileInputStream("./src/baekjoon/boj9019/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/graph/boj9019/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         T = Integer.parseInt(br.readLine());

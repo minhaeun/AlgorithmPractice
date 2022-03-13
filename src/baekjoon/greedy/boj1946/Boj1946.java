@@ -1,4 +1,4 @@
-package baekjoon.boj1946;
+package baekjoon.greedy.boj1946;
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -8,7 +8,7 @@ public class Boj1946 {
     static int[] arr;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj1946/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/greedy/boj1946/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();

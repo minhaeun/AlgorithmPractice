@@ -1,4 +1,4 @@
-package SWEA.SWEA1859;
+package SWEA.simulation.SWEA1859;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

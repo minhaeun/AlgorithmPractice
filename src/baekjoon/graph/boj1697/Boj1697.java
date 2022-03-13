@@ -1,10 +1,9 @@
-package baekjoon.boj1697;
+package baekjoon.graph.boj1697;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -14,7 +13,7 @@ public class Boj1697 {
     static int[] arr;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj1697/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/graph/boj1697/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 

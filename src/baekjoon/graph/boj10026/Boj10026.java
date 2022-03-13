@@ -1,4 +1,4 @@
-package baekjoon.boj10026;
+package baekjoon.graph.boj10026;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -26,7 +26,7 @@ public class Boj10026 {
 
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj10026/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/graph/boj10026/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 

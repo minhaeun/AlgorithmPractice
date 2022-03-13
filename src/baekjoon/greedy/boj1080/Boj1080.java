@@ -1,4 +1,4 @@
-package baekjoon.boj1080;
+package baekjoon.greedy.boj1080;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class Boj1080 {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj1080/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/greedy/boj1080/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stringTokenizer = new StringTokenizer(br.readLine());
 

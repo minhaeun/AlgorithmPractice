@@ -1,4 +1,4 @@
-package SWEA.SWEA1251;
+package SWEA.graph.SWEA1251;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -51,7 +51,7 @@ public class SWEA1251 {
 
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/SWEA/SWEA1251/input.txt"));
+        System.setIn(new FileInputStream("SWEA/graph/SWEA1251/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         StringBuilder sb = new StringBuilder();

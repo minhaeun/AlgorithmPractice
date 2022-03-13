@@ -1,4 +1,4 @@
-package baekjoon.boj18870;
+package baekjoon.sort.boj18870;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import java.util.*;
 public class Boj18870 {
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj18870/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/sort/boj18870/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         StringTokenizer st;

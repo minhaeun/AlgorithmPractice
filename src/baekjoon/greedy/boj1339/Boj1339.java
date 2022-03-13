@@ -1,4 +1,4 @@
-package baekjoon.boj1339;
+package baekjoon.greedy.boj1339;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class Boj1339 {
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("./src/baekjoon/boj1339/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/greedy/boj1339/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
