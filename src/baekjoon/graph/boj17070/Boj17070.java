@@ -1,4 +1,4 @@
-package baekjoon.boj17070;
+package baekjoon.graph.boj17070;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ public class Boj17070 {
     static int count;
 
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("./src/baekjoon/boj17070/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/graph/boj17070/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 

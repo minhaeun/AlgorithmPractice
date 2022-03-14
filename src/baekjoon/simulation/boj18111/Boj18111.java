@@ -1,4 +1,4 @@
-package baekjoon.simulation.Boj18111;
+package baekjoon.simulation.boj18111;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
