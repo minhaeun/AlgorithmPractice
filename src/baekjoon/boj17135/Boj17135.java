@@ -56,7 +56,6 @@ public class Boj17135 {
         if(count == 3){ // 궁수 3명을 뽑았으면 게임 시작
             int result = startGame();
             max = Math.max(result, max);
-            //System.out.println();
             return;
         }
 
@@ -75,30 +74,26 @@ public class Boj17135 {
 
             for(int i = 0; i < 3; i++){     // 궁수 수만큼 반복문
                 archers[i].r = time;
-                int min_dist = Integer.MAX_VALUE;
-                int enemy_r = enemies.get(0).r, enemy_c = enemies.get(0).c;
+                int min_dist = D;
+                kill.add(new Point(-1,M));
                 for(int j = 0; j < enemy_count; j++){   // 적의 수 만큼 궁수와의 거리 체크
+
                     if(check[j])    continue;   // 죽인 적이면 pass
                     int distance = dist(archers[i], enemies.get(j));
-                    if(min_dist > distance){// 궁수와 가장 가까운 거리에 있는 적 체크
-                        min_dist = distance;
-                        enemy_r = enemies.get(j).r;
-                        enemy_c = enemies.get(j).c;
-
-                    }else if (min_dist == distance){        // 거리가 같은 경우가 발견 될 경우 r 확인
-                        if(enemy_r < enemies.get(j).r)  continue;
-                        enemy_r = enemies.get(j).r;
-                        enemy_c = enemies.get(j).c;
+                    if(min_dist > distance || (distance == min_dist && enemies.get(j).c < kill.get(i).c)) {// 궁수와 가장 가까운 거리에 있는 적 체크
+                        min_dist = dist(archers[i], enemies.get(j));
+                        kill.set(i, enemies.get(j));
                     }
                 }
-                kill.add(new Point(enemy_r, enemy_c)); // 궁수가 죽인 적 위치 저장 (겹처도 상관 x)
+
+
             }
 
             time--;
             // 궁수 r -= 1
             for(int i = 0; i < check.length; i++){
                 for(int j = 0; j < kill.size(); j++){
-                    if(kill.get(j).r == enemies.get(i).r && kill.get(j).c == enemies.get(j).c && !check[i]){
+                    if((kill.get(j).r == enemies.get(i).r) && (kill.get(j).c == enemies.get(i).c) && !check[i]){
                         count++;
                         check[i] = true;
                     }
