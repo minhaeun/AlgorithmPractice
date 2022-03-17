@@ -1,4 +1,4 @@
-package baekjoon.boj2448;
+package baekjoon.recursion.boj2448;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ public class Boj2448 {
     static char[][] star;
 
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("./src/baekjoon/boj2448/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/recursion/boj2448/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
