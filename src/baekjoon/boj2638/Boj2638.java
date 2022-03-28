@@ -8,73 +8,84 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Boj2638 {
-
-    static int N, M;
-    static int[] dr = {-1, 1, 0, 0};
-    static int[] dc = {0, 0, -1, 1};
-    static int[][] map;
-    static int count, time;
-    public static class Point{
+    public static class Point {
         int r, c;
-        Point(int r, int c){
+
+        public Point(int r, int c) {
+            super();
             this.r = r;
             this.c = c;
         }
     }
 
-    public static void main(String[] args) throws Exception{
+    public static int N, M, cheeseCnt, answer;
+    public static boolean[][] visited;
+    public static int[][] grid;
+
+    public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("./src/baekjoon/boj2638/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        map = new int[N][M];
 
-        for(int i = 0; i < N; i++){
+        grid = new int[N][M];
+
+        for (int i = 0; i < N; ++i) {
             st = new StringTokenizer(br.readLine(), " ");
-            for(int j = 0; j < M; j++){
-                map[i][j] = Integer.parseInt(st.nextToken());
-                if(map[i][j] == 1)
-                    count++;
+
+            for (int j = 0; j < M; ++j) {
+                grid[i][j] = Integer.parseInt(st.nextToken());
+
+                if (grid[i][j] == 1) {
+                    cheeseCnt++;
+                }
             }
         }
 
-        Queue<Point> queue = new LinkedList<>();
-        queue.add(new Point(0, 0));
-
-        while(count > 0){
-            int size = queue.size();
-            for(int i = 0; i < size; i++){
-                Point cur = queue.poll();
-                map[cur.r][cur.c] = 10;
-
-                queue.add(cur);
-            }
-            while(!queue.isEmpty()){
-                Point cur = queue.poll();
-
-                for(int d = 0; d < 4; d++){
-                    int nr = cur.r + dr[d];
-                    int nc = cur.c + dc[d];
-
-                    if(nr < 0 || nr >= N || nc < 0 || nc >= M || map[nr][nc] != 0)  continue;
-
-                    queue.add(new Point(nr, nc));
-                    map[nr][nc] = 10;
-                }
-            }
-
-            for(int i = 1; i < N - 1; i++){
-                for(int j = 1; j < M - 1; j++){
-                    if(map[i][j] == 1 && (map[i - 1][j] + map[i + 1][j] + map[i][j - 1] + map[i][j + 1]) >= 20){
-                        queue.add(new Point(i, j));
-                    }
-                }
-            }
-            count -= queue.size();
-            time++;
+        while (cheeseCnt > 0) {
+            visited = new boolean[N][M];
+            bfs();
+            answer++;
         }
-        System.out.println(time);
+
+        System.out.println(answer);
+
+    }
+
+    public static int[] dr = {-1, 1, 0, 0};
+    public static int[] dc = {0, 0, -1, 1};
+
+
+    public static void bfs() {
+        Queue<Point> q = new LinkedList<>();
+        q.offer(new Point(0, 0));
+        visited[0][0] = true;
+
+        while (!q.isEmpty()) {
+            Point point = q.poll();
+
+            for (int i = 0; i < 4; ++i) {
+                int nr = point.r + dr[i];
+                int nc = point.c + dc[i];
+
+                if (nr < 0 || nc < 0 || nr >= N || nc >= M) {
+                    continue;
+                }
+
+                if (visited[nr][nc] && grid[nr][nc] == 1) {
+                    grid[nr][nc] = 0;
+                    cheeseCnt--;
+                }
+
+                if (!visited[nr][nc] && grid[nr][nc] == 0) {
+                    q.offer(new Point(nr, nc));
+                }
+
+                visited[nr][nc] = true;
+            }
+        }
     }
 }
+
