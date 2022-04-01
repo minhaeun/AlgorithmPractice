@@ -12,7 +12,7 @@ public class Boj2636 {
     static int[][] grid;
     static boolean[][] visit;
     static int cheeseCount, time, count;
-    static int[] dr = {-1, 1, 0, 0};  // 상, 하, 좌, 우
+    static int[] dr = {-1, 1, 0, 0};
     static int[] dc = {0, 0, -1, 1};
 
     public static class Point{
