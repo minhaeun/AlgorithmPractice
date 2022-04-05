@@ -3,11 +3,12 @@ package SWEA.SWEA5656;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class SWEA5656 {
+public class SWEA5656_2 {
     static int N, W, H, min;
     static int[] dr = {-1, 1, 0, 0};
     static int[] dc = {0, 0, -1, 1};
@@ -122,21 +123,23 @@ public class SWEA5656 {
             }
         }
     }
-
+    static ArrayList<Integer> list = new ArrayList<>();
     static void down(int[][] map) {  // 부서진 벽돌 정리, 남은 벽돌 정리!! (공중에 떠있는 벽돌도 아래로 내리기)
         for (int c = 0; c < W; c++) {
             int r = H - 1;  // 아래행 시작
-            while (r > 0) {
-                if (map[r][c] == 0) {     // 빈칸이면 내릴 벽돌 찾기
-                    int nr = r - 1;
-                    while (nr > 0 && map[nr][c] == 0) nr--;
-
-                    map[r][c] = map[nr][c];
-                    map[nr][c] = 0;
-
+            while (r >= 0) {
+                if (map[r][c] > 0) {     // 벽돌 찾기
+                    list.add(map[r][c]);
+                    map[r][c] = 0;
                 }
                 r--;
+            }   // 부서지지않고 남아있는 벽돌 리스트에 다 담기, 벽돌에 있던 자리는 빈 공간으로 처리가 됨.
+
+            r = H-1;
+            for(int a : list){  // 벽돌리스트
+                map[r--][c] = a;
             }
+            list.clear();
         }
     }
 
