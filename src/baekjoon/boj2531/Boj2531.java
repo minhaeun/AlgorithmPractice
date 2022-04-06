@@ -22,7 +22,7 @@ public class Boj2531 {
         c = Integer.parseInt(st.nextToken());   // 쿠폰 번호
 
         belt = new int[N];
-        kinds = new int[N];
+        kinds = new int[d + 1];
         choice = new LinkedList<>();
 
         for(int i = 0; i < N; i++){
@@ -30,19 +30,32 @@ public class Boj2531 {
             belt[i] = Integer.parseInt(br.readLine());
         }
 
-        // 연속해서 초밥 먹기 시작
+        // 처음부터 연속해서 초밥 먹기 시작 (k <= N)
         for(int i = 0; i < k; i++){
             choice.offer(belt[i]);      // 선택한 초밥을 큐에 저장
-            kinds[belt[i]]++;           // 초밥 종류 세기
-            if(kinds[belt[i]] == 1){    //
-                count++;
+            kinds[belt[i]]++;           // 해당되는 초밥 수 세기
+            if(kinds[belt[i]] == 1){
+                count++;            // 먹을 수 있는 초밥 종류 수 세기
             }
         }
 
+        int max = count;
+        // 회전초밥 전부 확인
+        for(int i = k; i < N + k - 1; i++){
+            // 큐에 종류가 하나밖에 없는 초밥이었다면 count - 1
+            if(--kinds[choice.poll()] == 0) count--;
+            // 초밥 종류 확인해서 +1
+            int value = ++kinds[belt[i % N]];
+            // 초밥이 1개밖에 없다면 연속 가능
+            if(value == 1) count++;
+            // 큐에 저장
+            choice.offer(belt[i % N]);
+            // 서비스초밥을 안먹었으면
+            if(kinds[c] == 0)   max = Math.max(max, count + 1);
+            // 먹었으면
+            else    max = Math.max(max, count);
+        }
 
-
-
-
-
+        System.out.println(max);
     }
 }
