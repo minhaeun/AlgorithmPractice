@@ -1,7 +1,5 @@
 package baekjoon.boj2338;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.util.Scanner;
 
