@@ -13,18 +13,18 @@ public class Boj17413 {
         StringBuilder sb = new StringBuilder();
         String str = br.readLine();
         for(int i = 0; i < str.length(); i++){
-            if(str.charAt(i) == '<'){
+            if(str.charAt(i) == '<'){   // '<'이면 문자열 모두 pop하고 sb 추가
                 while(!stack.isEmpty()) sb.append(stack.pop());
-                while(str.charAt(i) != '>') sb.append(str.charAt(i++));
+                while(str.charAt(i) != '>') sb.append(str.charAt(i++)); // '>' 만날때까지 문자열 그대로 더하기
                 sb.append('>');
-            } else if(str.charAt(i) == ' '){
+            } else if(str.charAt(i) == ' '){    //  빈칸일 경우 문자열 모두 pop하고 sb에 추가
                 while(!stack.isEmpty()) sb.append(stack.pop());
                 sb.append(' ');
-            }else{
+            }else{  // 일반 문자들은 모두 stack에 넣기
                 stack.push(str.charAt(i));
             }
         }
-        while(!stack.isEmpty()) sb.append(stack.pop());
+        while(!stack.isEmpty()) sb.append(stack.pop()); // stack에 남아있는 모든 문자열 pop
         System.out.println(sb.toString());
     }
 }
