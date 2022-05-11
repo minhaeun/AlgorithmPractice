@@ -4,13 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Boj2239 {
     static int[][] grid;
     static int[][] check;
     static ArrayList<Point> arrayList;
-
+    static int arrayLen;
     public static class Point{
         int r, c;
         Point (int r, int c){
@@ -22,10 +21,12 @@ public class Boj2239 {
     public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("./src/baekjoon/boj2239/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
         grid = new int[9][9];
         check = new int[9][9];
         arrayList = new ArrayList<>();
+
 
         for (int i = 0; i < 9; i++) {
             String str = br.readLine();
@@ -39,30 +40,51 @@ public class Boj2239 {
                 // 0이 아니면 다음 칸
                 if (grid[r][c] != 0) continue;
                 // 0인 좌표 리스트에 추가
-                // arrayList.add(new Point(r, c));
+                 arrayList.add(new Point(r, c));
                 // 0이면 빈칸이니까 검사 시작
-                checkArea(r, c);
-                fillNum(r, c);
             }
         }
+        arrayLen = arrayList.size();
+        dfs(0);
+        for(int i = 0; i < 9; i++){
+            for(int j = 0; j < 9; j++){
+                sb.append(grid[i][j]);
+            }
+            sb.append("\n");
+        }
+        System.out.println(sb.toString());
 
     }
 
-    static void checkArea(int r, int c) {
-
-        // 행 검사
-        for (int i = 0; i < 9; i++) {
-            if (grid[r][i] == 0) continue;
-            check[r][c] |= 1 << (grid[r][i] - 1);
+    static boolean dfs(int depth){
+        if(depth == arrayLen){
+            return true;
         }
-        //System.out.println("행 끝 : " + check[r][c]);
 
-        // 열 검사
-        for (int i = 0; i < 9; i++) {
-            if (grid[i][c] == 0) continue;
-            check[r][c] |= 1 << (grid[i][c] - 1);
+        for(int i = 1; i <= 9; i++){
+            Point point = arrayList.get(depth);
+            if(available(i, point)){
+                grid[point.r][point.c] = i;
+                if(dfs(depth+1)) return true;
+                grid[point.r][point.c] = 0;
+            }
         }
-        //System.out.println("열 끝 : " + check[r][c]);
+        return false;
+    }
+
+    static boolean available(int num, Point point){
+        int r = point.r;
+        int c = point.c;
+
+        // 세로 검사
+        for (int i = 0; i < 9; i++) {
+            if(grid[i][c] == num)   return false;
+        }
+
+        // 가로 검사
+        for (int i = 0; i < 9; i++) {
+            if (grid[r][i] == num) return false;
+        }
 
         // 3x3 보드 검사
         int firstR = 0, firstC = 0;
@@ -70,20 +92,10 @@ public class Boj2239 {
         if (c != 0) firstC = c / 3 * 3;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (grid[firstR + i][firstC + j] == 0) continue;
-                check[r][c] |= 1 << (grid[firstR + i][firstC + j] - 1);
+                if (grid[firstR + i][firstC + j] == num)    return false;
             }
         }
-        //System.out.println("보드 끝 : " + check[r][c]);
-    }
-
-    static void fillNum(int r, int c){
-        for(int i = 0; i < 9; i++) {
-            if ((grid[r][c] & (1 << i)) != (1 << i)) continue;
-            check[r][c] |= 1 << i;
-            grid[r][c] = i+1;
-            return;
-        }
+        return true;
     }
 
 }
