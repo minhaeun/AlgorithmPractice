@@ -24,9 +24,7 @@ public class Boj2239 {
         StringBuilder sb = new StringBuilder();
 
         grid = new int[9][9];
-        check = new int[9][9];
         arrayList = new ArrayList<>();
-
 
         for (int i = 0; i < 9; i++) {
             String str = br.readLine();
