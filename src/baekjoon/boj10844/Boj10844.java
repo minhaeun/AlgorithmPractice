@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class Boj10844 {
     static int N;
-    static int MOD = 1000000000;
+    static int MOD = 1_000_000_000;
     static int[][] dp;
     static long sum;
 
@@ -33,7 +33,7 @@ public class Boj10844 {
             //sum = (sum + dp[N][i]) % MOD;
             sum += dp[N][i];
             sum %= MOD;
-            // sum += dp[N][i] % MOD;
+            // sum += dp[N][i] % MOD; (x)
         }
         System.out.println(sum);
     }
