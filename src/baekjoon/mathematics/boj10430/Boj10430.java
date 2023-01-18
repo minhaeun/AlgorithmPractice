@@ -1,11 +1,11 @@
-package baekjoon.boj10430;
+package baekjoon.mathematics.boj10430;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
 public class Boj10430 {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj10430/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/mathematics/boj10430/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         StringBuilder sb = new StringBuilder();
