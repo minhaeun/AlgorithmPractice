@@ -1,4 +1,4 @@
-package baekjoon.boj2609;
+package baekjoon.mathematics.boj2609;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class Boj2609 {
     public static void main(String[] args) throws Exception{
-        System.setIn(new FileInputStream("./src/baekjoon/boj2609/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/mathematics/boj2609/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int num1 = Integer.parseInt(st.nextToken());
