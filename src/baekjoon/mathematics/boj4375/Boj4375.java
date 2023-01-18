@@ -1,10 +1,10 @@
-package baekjoon.boj4375;
+package baekjoon.mathematics.boj4375;
 
 import java.io.*;
 
 public class Boj4375 {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("./src/baekjoon/boj4375/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/mathematics/boj4375/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         String input;
