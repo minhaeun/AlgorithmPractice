@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class Boj1107 {
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("baekjoon/brute_force/boj1107/input.txt"));
+        System.setIn(new FileInputStream("./src/baekjoon/brute_force/boj1107/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = null;
 
