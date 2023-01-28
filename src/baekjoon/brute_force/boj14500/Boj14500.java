@@ -1,9 +1,8 @@
-package baekjoon.boj14500;
+package baekjoon.brute_force.boj14500;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Boj14500 {
@@ -14,7 +13,7 @@ public class Boj14500 {
     static boolean[][] visit;
 
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("./src/baekjoon/boj14500/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/brute_force/boj14500/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
