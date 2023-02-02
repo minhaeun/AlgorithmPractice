@@ -13,7 +13,7 @@ public class Boj14500 {
     static boolean[][] visit;
 
     public static void main(String[] args) throws Exception {
-        System.setIn(new FileInputStream("baekjoon/brute_force/boj14500/input.txt"));
+        System.setIn(new FileInputStream("./src/baekjoon/brute_force/boj14500/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
@@ -32,11 +32,10 @@ public class Boj14500 {
 
         for (int i = 1; i < N+1; i++) {
             for (int j = 1; j < M+1; j++) {
-                //dfs(i, j, 1, map[i][j]);
                 dfs(i, j, 0, 0);
 
                 int sum = map[i][j] + map[i+1][j] + map[i-1][j] + map[i][j+1] + map[i][j-1];
-                check(i, j, sum);
+                //check(i, j, sum);
 
             }
         }
