@@ -22,10 +22,6 @@ public class Boj1500 {
             else max *= div ;
         }
         System.out.println(max);
-
-
-
-
-
+        
     }
 }
