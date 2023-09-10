@@ -1,4 +1,4 @@
-package baekjoon.data_structure.boj1253;
+package baekjoon.binary_search.boj1253;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class Boj1253 {
     public static void main(String[] args) throws Exception{
-        System.setIn(new FileInputStream("./src/baekjoon/data_structure/boj1253/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/binary_search/boj1253/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
