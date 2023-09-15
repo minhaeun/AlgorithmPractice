@@ -1,4 +1,4 @@
-package baekjoon.recursion.boj1987;
+package baekjoon.boj1987;
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -12,7 +12,7 @@ public class Boj1987 {
     static boolean[] chars;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("baekjoon/recursion/boj1987/input.txt"));
+        System.setIn(new FileInputStream("baekjoon/boj1987/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
