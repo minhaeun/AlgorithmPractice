@@ -28,7 +28,7 @@ public class Boj16236 {
         }
     }
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("baekjoon/simulation/boj16236/input.txt"));
+        System.setIn(new FileInputStream("./src/baekjoon/simulation/boj16236/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
