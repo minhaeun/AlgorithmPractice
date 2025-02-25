@@ -14,7 +14,7 @@ public class P389479 {
                     int count = player / m - servers[i];
 
                     for(int j = 0; j < k; j++){
-                        if(i + j <= 23) servers[i + j] = servers[i + j] + count;
+                        if(i + j <= 23) servers[i + j] += count;
                     }
                     answer += count;
                 }
