@@ -9,7 +9,7 @@ public class P17683 {
         int maxTime = 0;
         m = m.replace("C#", "c")
                 .replace("D#", "d")
-                .replace("F#", "d")
+                .replace("F#", "f")
                 .replace("G#", "g")
                 .replace("A#", "a");
 
@@ -33,7 +33,7 @@ public class P17683 {
             String title = st1.nextToken();
             String tmp = st1.nextToken().replace("C#", "c")
                     .replace("D#", "d")
-                    .replace("F#", "d")
+                    .replace("F#", "f")
                     .replace("G#", "g")
                     .replace("A#", "a");
             String melody = tmp;
