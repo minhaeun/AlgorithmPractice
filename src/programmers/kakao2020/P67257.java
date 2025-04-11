@@ -28,9 +28,7 @@ public class P67257 {
     }
     public static void choice(int count, String str){
         if(count == opLen){
-           // System.out.println("str : " + str);
             Long value = check(str.toCharArray());
-            //System.out.println("value : " + value);
             max = Math.max(max, Math.abs(value));
             return;
         }
