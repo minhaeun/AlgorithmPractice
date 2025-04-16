@@ -45,7 +45,7 @@ public class P67259 {
                 int nc = c + dc[d];
                 if(nr < 0 || nr >= N || nc < 0 || nc >= N || map[nr][nc] == 1) continue;
                 int value = 100;
-                if(d != bd && bd != -1) value += 500;
+                if(d != bd) value += 500;
                 if(visited[nr][nc][d] > visited[r][c][bd] + value) {
                     visited[nr][nc][d] = visited[r][c][bd] + value;
                     queue.offer(new Point(nr, nc, d));
