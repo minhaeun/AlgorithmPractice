@@ -2,7 +2,7 @@ package programmers.hash;
 
 import java.util.*;
 
-public class P2579 {
+public class P42579 {
     static HashMap<String, Integer> genresMap;
     static HashMap<String, HashMap<Integer, Integer>> musicMap;
     public static void main(String[] args) {
