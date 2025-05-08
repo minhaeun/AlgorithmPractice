@@ -1,4 +1,4 @@
-package programmers.sumerWinter2019;
+package programmers.summerWinter2019;
 
 import java.math.BigInteger;
 
