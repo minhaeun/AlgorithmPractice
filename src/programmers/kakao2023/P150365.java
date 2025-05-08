@@ -21,7 +21,7 @@ public class P150365 {
         K = k;
 
         if(Math.abs(x - r) + Math.abs(y - c) > k) return "impossible";
-        //if((Math.abs(x - r) + Math.abs(y - c)) % 2 != k%2) return "impossible";
+        if((Math.abs(x - r) + Math.abs(y - c)) % 2 != k%2) return "impossible";
 
 
         dfs(x - 1, y - 1, "", 0);
