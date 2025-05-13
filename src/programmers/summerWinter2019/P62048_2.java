@@ -1,7 +1,5 @@
 package programmers.summerWinter2019;
 
-import java.math.BigInteger;
-
 public class P62048_2 {
     public static long solution(int w, int h) {
         long answer = 1;
