@@ -20,8 +20,7 @@ public class P42626 {
             pq.offer(value1 + (value2 * 2));
             answer++;
         }
-        int min = pq.poll();
-        if(min < K) return -1;
+        if(pq.peek() < K) return -1;
         return answer;
     }
     public static void main(String[] args) {

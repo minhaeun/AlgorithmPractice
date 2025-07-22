@@ -59,12 +59,12 @@ public class P67257 {
     public static long cal(int index, char op, ArrayList<String> tmpList){
         long a = Long.parseLong(tmpList.get(index - 1));
         long b = Long.parseLong(tmpList.get(index + 1));
-        return switch (op) {
-            case '*' -> a * b;
-            case '+' -> a + b;
-            case '-' -> a - b;
-            default -> 0;
-        };
+        switch (op) {
+            case '*' : return a * b;
+            case '+' : return a + b;
+            case '-' : return a - b;
+            default : return 0;
+        }
     }
 
     public static void main(String[] args) {
