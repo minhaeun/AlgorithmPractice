@@ -19,7 +19,6 @@ public class P12949 {
                 answer[i][j] = value;
             }
         }
-
         return answer;
     }
     public static void main(String[] args) {
