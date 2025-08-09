@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class P131130 {
     public static int count, visited[], len;
     public static int solution(int[] cards) {
-        int answer = 1;
         count = 1;
         len = cards.length;
         visited = new int[len];
@@ -24,8 +23,7 @@ public class P131130 {
         }
 
         Arrays.sort(arr);
-        answer = arr[count - 1] * arr[count - 2];
-        return answer;
+        return arr[count - 1] * arr[count - 2];
     }
 
     public static void dfs(int num, int[] cards){
